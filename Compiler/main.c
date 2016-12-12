@@ -167,9 +167,11 @@ PT_TOKEN_XY scanner(char *program)
                         key+=2;
                         return p_token_xy;
                     }
-                    else if (key >= 0
-                        &&
-                        (program[key] == '+' || program[key] == '-'))
+                    else if ( key >= 0
+                             &&
+                             (program[key] == '+' || program[key] == '-'
+                              || program[key]=='*' || program[key]=='/')
+                             )
                     {
                         // 从 case 判断的这个符号开始连接
                         // 注意前面减了 2，这里用 key++ 回到 case 判断的 +- 号
@@ -266,9 +268,11 @@ PT_TOKEN_XY scanner(char *program)
                         key+=2;
                         return p_token_xy;
                     }
-                    else if (key >= 0
-                             &&
-                             (program[key] == '+' || program[key] == '-'))
+                    else if ( key >= 0
+                              &&
+                              (program[key] == '+' || program[key] == '-'
+                                || program[key]=='*' || program[key]=='/')
+                             )
                     {
                         // 从 case 判断的这个符号开始连接
                         // 注意前面减了 2，这里用 key++ 回到 case 判断的 +- 号
