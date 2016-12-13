@@ -11,6 +11,7 @@
 int main(int argc, const char * argv[])
 {
     sum = 0;
+//    sum = -1;
     key = 0;
     is_const = NULL;
     token_xy.x = 0;
@@ -24,7 +25,6 @@ int main(int argc, const char * argv[])
         program[sum++] = ch;
     }while(ch != '#');
     
-//    printf("%d\n", sum);
     sum--;
 //    printf("%d\n", sum);
     while(key < sum)
